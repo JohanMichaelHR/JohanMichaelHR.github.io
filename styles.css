@@ -1,0 +1,78 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #020202;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.animated-title {
+    font-size: 48px;
+    color: hsl(0, 3%, 6%);
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #61a6ff, #61ffca, #ffca61, #ff6f61);
+    background-size: 400% 400%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientTitleAnimation 8s ease infinite, titleGlow 2s ease-in-out infinite alternate;
+    margin-bottom: 20px;
+}
+
+@keyframes gradientTitleAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes titleGlow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #61a6ff, 0 0 30px #61a6ff, 0 0 40px #61a6ff, 0 0 50px #61a6ff, 0 0 60px #61a6ff, 0 0 70px #61a6ff;
+    }
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #61a6ff, 0 0 40px #61a6ff, 0 0 50px #61a6ff, 0 0 60px #61a6ff, 0 0 70px #61a6ff, 0 0 80px #61a6ff;
+    }
+}
+
+.animated-text {
+    font-size: 24px;
+    color: #333;
+    background: linear-gradient(90deg, #ff6f61, #ffca61, #61ffca, #61a6ff);
+    background-size: 400% 400%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: gradientTextAnimation 8s ease infinite, textGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes gradientTextAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes textGlow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #ff6f61, 0 0 30px #ff6f61, 0 0 40px #ff6f61, 0 0 50px #ff6f61, 0 0 60px #ff6f61, 0 0 70px #ff6f61;
+    }
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #ff6f61, 0 0 40px #ff6f61, 0 0 50px #ff6f61, 0 0 60px #ff6f61, 0 0 70px #ff6f61, 0 0 80px #ff6f61;
+    }
+}
